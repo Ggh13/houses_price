@@ -1,0 +1,21 @@
+{"time":"2026-09-30T22:22:26.1963461+03:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-09-30T22:22:26.1981692+03:00","level":"INFO","msg":"stream: starting","core version":"0.29.0"}
+{"time":"2026-09-30T22:22:26.9448194+03:00","level":"INFO","msg":"stream: created new stream","id":"eclv00si"}
+{"time":"2026-09-30T22:22:26.9448194+03:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-09-30T22:22:26.9468035+03:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-09-30T22:22:26.9468035+03:00","level":"INFO","msg":"writer: started","stream_id":"eclv00si"}
+{"time":"2026-09-30T22:22:26.9468035+03:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-09-30T22:22:27.3853579+03:00","level":"ERROR","msg":"api: HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-09-30T22:22:27.3853579+03:00","level":"ERROR","msg":"featurechecker: failed to load features, all will be disabled","error":"returned error 403: {\"data\":null,\"errors\":[{\"message\":\"\\u003c!doctype html\\u003e\\u003cmeta charset=\\\"utf-8\\\"\\u003e\\u003cmeta name=viewport content=\\\"width=device-width, initial-scale=1\\\"\\u003e\\u003ctitle\\u003e403\\u003c/title\\u003e403 Forbidden\"}]}"}
+{"time":"2026-09-30T22:22:27.3853579+03:00","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2026-09-30T22:22:27.6394253+03:00","level":"ERROR","msg":"api: HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-09-30T22:22:27.6394253+03:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 403: {\"data\":null,\"errors\":[{\"message\":\"\\u003c!doctype html\\u003e\\u003cmeta charset=\\\"utf-8\\\"\\u003e\\u003cmeta name=viewport content=\\\"width=device-width, initial-scale=1\\\"\\u003e\\u003ctitle\\u003e403\\u003c/title\\u003e403 Forbidden\"}]}"}
+{"time":"2026-09-30T22:22:27.6674578+03:00","level":"ERROR","msg":"sender: uploadConfigFile: runhandle: run not yet initialized"}
+{"time":"2026-09-30T22:22:27.6694623+03:00","level":"ERROR","msg":"runfiles: runhandle: run not yet initialized"}
+{"time":"2026-09-30T22:22:27.6694623+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-30T22:22:27.6694623+03:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-09-30T22:22:27.6704579+03:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-09-30T22:22:27.6704579+03:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-09-30T22:22:27.6704579+03:00","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-09-30T22:22:28.248286+03:00","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: failed to send metrics to https://api.wandb.ai/sdk/otel/v1/metrics: 403 Forbidden (body: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden) failed to send logs to https://api.wandb.ai/sdk/otel/v1/logs: 403 Forbidden (body: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden)]"}
+{"time":"2026-09-30T22:22:28.2493295+03:00","level":"ERROR","msg":"stream: runURL: runhandle: run not yet initialized"}

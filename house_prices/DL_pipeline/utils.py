@@ -79,13 +79,16 @@ def train(model, train_loader, val_loader, config):
             "lr": optimizer.param_groups[0]['lr']
         })
 
+    print(f"Best val_loss: {best_val_loss:.4f}")
+    print(f"Best val_rmse: {np.sqrt(best_val_loss):.4f}")
+
 def Predict_kfold(config):
     test_path = "./data/test.csv"
     test_df = pd.read_csv(test_path)
     test_df = data_engineering(test_df)
     n_splits = config.data.kfold.n_splits
 
-    all_fold_probs = []
+    all_fold_preds = []
 
     for fold in range(1, n_splits + 1):
         pipeline_path = os.path.join(config.paths.checkpoint_dir, f"preprocessor_fold_{fold}.pkl")
@@ -95,7 +98,7 @@ def Predict_kfold(config):
         X_test = pipeline.transform(test_df)
         if hasattr(X_test, "toarray"):
             X_test = X_test.toarray()
-        
+
         X_tensor = torch.tensor(X_test, dtype=torch.float32).to(config.device)
 
         model = RegressionModel(in_features=config.in_features).to(config.device)
@@ -103,27 +106,18 @@ def Predict_kfold(config):
         model.eval()
 
         with torch.no_grad():
-            logits = model(X_tensor)
-            probs = torch.sigmoid(logits).cpu().numpy().flatten()
-            all_fold_probs.append(probs)
+            preds = model(X_tensor).cpu().numpy().flatten()
+            all_fold_preds.append(preds)
 
-        mean_probs = np.mean(all_fold_probs, axis=0)
-        final_predictions = (mean_probs >= 0.5).astype(int)
-
-        submission = pd.DataFrame({
-            'PassengerId': test_df['PassengerId'],
-            'Survived': final_predictions
-        })
-    # Усредняем логирифмированные предсказания
-    mean_preds_log = np.mean(all_fold_probs, axis=0)
-    
-    # Возвращаем к исходной шкале цен (если использовался log1p)
-    final_predictions = np.expm1(mean_preds_log) 
+    mean_preds_log = np.mean(all_fold_preds, axis=0)
+    final_predictions = np.expm1(mean_preds_log)
 
     submission = pd.DataFrame({
         'Id': test_df['Id'],
         'SalePrice': final_predictions
     })
+    submission.to_csv('./submission.csv', index=False)
+    print("Submission saved to ./submission.csv")
 
 def KFoldTraining(config):
     if not os.path.exists(config.paths.checkpoint_dir):
@@ -164,8 +158,8 @@ def KFoldTraining(config):
             X_train = X_train.toarray()
             X_val = X_val.toarray()
 
-        train_ds = TensorDataset(torch.tensor(X_train, dtype=torch.float32), torch.tensor(train_fold_df['Survived'].values, dtype=torch.float32))
-        val_ds = TensorDataset(torch.tensor(X_val, dtype=torch.float32), torch.tensor(val_fold_df['Survived'].values, dtype=torch.long))
+        train_ds = TensorDataset(torch.tensor(X_train, dtype=torch.float32), torch.tensor(np.log1p(train_fold_df['SalePrice'].values), dtype=torch.float32))
+        val_ds = TensorDataset(torch.tensor(X_val, dtype=torch.float32), torch.tensor(np.log1p(val_fold_df['SalePrice'].values), dtype=torch.float32))
 
         train_loader = DataLoader(train_ds, batch_size=config.training.batch_size, shuffle=True)
         val_loader = DataLoader(val_ds, batch_size=config.training.batch_size, shuffle=False)

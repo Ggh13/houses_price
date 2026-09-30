@@ -3,7 +3,7 @@ from omegaconf import OmegaConf
 
 config = OmegaConf.create({
     "seed": 42,
-    "mode": "classic_training",
+    "mode": "classic_ml",
     "device": "cuda",
     "in_features": 288,
     "training": {
