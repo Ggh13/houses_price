@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "C:\i\projects\house_prices\DL_pipeline\main.py", line 39, in <module>
+    run(config)
+  File "C:\i\projects\house_prices\DL_pipeline\main.py", line 16, in run
+    ClassicTraining(config)
+  File "C:\i\projects\house_prices\DL_pipeline\utils.py", line 202, in ClassicTraining
+    train(model, train_loader, val_loader, config)
+  File "C:\i\projects\house_prices\DL_pipeline\utils.py", line 43, in train
+    preds = model(X_batch)
+            ^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\house_prices\DL_pipeline\models.py", line 24, in forward
+    return self.net(x)
+           ^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (32x288 and 9x128)

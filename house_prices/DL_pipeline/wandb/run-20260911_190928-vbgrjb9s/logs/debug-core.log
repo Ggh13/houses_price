@@ -1,0 +1,17 @@
+{"time":"2026-09-11T19:09:22.259144+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmpnionjz1g\\port-18644.txt","pid":18644,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T19:09:22.2672807+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":18644}
+{"time":"2026-09-11T19:09:22.2672807+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-18644-2236-997317084\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:09:22.2672807+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":56171,"Zone":""}}
+{"time":"2026-09-11T19:09:22.4783844+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:28.7041867+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"vbgrjb9s","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:29.5211562+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"vbgrjb9s","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:32.1856108+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:32.1861375+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:32.1861375+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T19:09:32.1861375+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:32.1861375+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:32.1881167+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-18644-2236-997317084\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:09:32.1881167+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":56171,"Zone":""}}
+{"time":"2026-09-11T19:09:36.5840916+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:37.7091043+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:56172)"}
+{"time":"2026-09-11T19:09:37.7091043+03:00","level":"INFO","msg":"server: all connections closed"}

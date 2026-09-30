@@ -1,0 +1,21 @@
+{"time":"2026-09-11T17:22:02.1029657+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmpwqnms23h\\port-6892.txt","pid":6892,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T17:22:02.1119668+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":6892}
+{"time":"2026-09-11T17:22:02.1119668+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":55730,"Zone":""}}
+{"time":"2026-09-11T17:22:02.1119668+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-6892-27568-3349328493\\socket","Net":"unix"}}
+{"time":"2026-09-11T17:22:02.1499252+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:03.3869137+03:00","level":"ERROR","msg":"api: HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-09-11T17:22:03.6562635+03:00","level":"ERROR","msg":"api: HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-09-11T17:22:03.6996327+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"1zyslarc","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.0705034+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"1zyslarc","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.9102049+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.9102049+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.9102049+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T17:22:05.9102049+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.9108653+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:05.911653+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-6892-27568-3349328493\\socket","Net":"unix"}}
+{"time":"2026-09-11T17:22:05.911653+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":55730,"Zone":""}}
+{"time":"2026-09-11T17:22:06.2266659+03:00","level":"ERROR","msg":"connection: failed to shut down telemetry proxy","error":"shutdown errors: [failed to upload metrics: failed to send metrics to https://api.wandb.ai/sdk/otel/v1/metrics: 403 Forbidden (body: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden)]"}
+{"time":"2026-09-11T17:22:06.5006446+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:06.8066044+03:00","level":"ERROR","msg":"wbapi: error shutting down OpenTelemetry handler","error":"shutdown errors: [failed to upload metrics: failed to send metrics to https://api.wandb.ai/sdk/otel/v1/metrics: 403 Forbidden (body: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden)]"}
+{"time":"2026-09-11T17:22:06.8066044+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:55731)"}
+{"time":"2026-09-11T17:22:06.8066044+03:00","level":"INFO","msg":"server: all connections closed"}

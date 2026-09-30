@@ -1,0 +1,21 @@
+{"time":"2026-09-11T19:11:05.4840162+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmpg4i9i3jp\\port-13772.txt","pid":13772,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T19:11:05.4870556+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":13772}
+{"time":"2026-09-11T19:11:05.4870556+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":56871,"Zone":""}}
+{"time":"2026-09-11T19:11:05.4870556+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-13772-11736-1007105000\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:11:05.6391195+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:08.8304357+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"bkjqr3z7","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:10.2853414+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"bkjqr3z7","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:12.1759284+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:56872)","requestId":"vgcickkefvzu"}
+{"time":"2026-09-11T19:11:14.3762393+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:56872)","requestId":"vgcickkefvzu"}
+{"time":"2026-09-11T19:11:14.3773536+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"bkjqr3z7","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"bkjqr3z7","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3289903+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T19:11:15.3295181+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:15.3300959+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-13772-11736-1007105000\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:11:15.3300959+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":56871,"Zone":""}}
+{"time":"2026-09-11T19:11:16.6967627+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:56872)"}
+{"time":"2026-09-11T19:11:16.6967627+03:00","level":"INFO","msg":"server: all connections closed"}

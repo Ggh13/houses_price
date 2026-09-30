@@ -1,0 +1,25 @@
+{"time":"2026-09-11T20:28:00.6332664+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmps989_qb6\\port-4396.txt","pid":4396,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T20:28:00.6372657+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":4396}
+{"time":"2026-09-11T20:28:00.6372657+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-4396-27940-3386853033\\socket","Net":"unix"}}
+{"time":"2026-09-11T20:28:00.6372657+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":52235,"Zone":""}}
+{"time":"2026-09-11T20:28:00.7872097+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:04.4956762+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"cqqsvm4p","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:05.8370728+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"cqqsvm4p","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:07.5550332+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:52236)","requestId":"ee6wyvc9601p"}
+{"time":"2026-09-11T20:28:12.9131001+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:52236)","requestId":"oxrgohhosdj8"}
+{"time":"2026-09-11T20:28:40.7171854+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:52236)","requestId":"oxrgohhosdj8"}
+{"time":"2026-09-11T20:28:42.312046+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:52236)","requestId":"oxrgohhosdj8"}
+{"time":"2026-09-11T20:28:42.3148939+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"cqqsvm4p","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:44.4565908+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"cqqsvm4p","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3171059+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3171059+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3171059+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3171059+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T20:28:46.3171059+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3181095+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:46.3201143+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-4396-27940-3386853033\\socket","Net":"unix"}}
+{"time":"2026-09-11T20:28:46.3201143+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":52235,"Zone":""}}
+{"time":"2026-09-11T20:28:48.3178416+03:00","level":"ERROR","msg":"connection: failed to shut down telemetry proxy","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}
+{"time":"2026-09-11T20:28:48.3186753+03:00","level":"ERROR","msg":"wbapi: error shutting down OpenTelemetry handler","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}
+{"time":"2026-09-11T20:28:48.3186753+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:52236)"}
+{"time":"2026-09-11T20:28:48.3186753+03:00","level":"INFO","msg":"server: all connections closed"}

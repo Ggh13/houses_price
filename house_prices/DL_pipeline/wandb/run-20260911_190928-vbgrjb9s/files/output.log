@@ -1,0 +1,15 @@
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:70: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Sex']=df['Sex'].replace({'male':1,'female':0})
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:71: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Embarked']=df['Embarked'].replace({'S':1,'C':2,'Q':3})
+C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\i\projects\titanic\DL_pipeline\main.py", line 39, in <module>
+    run(config)
+  File "C:\i\projects\titanic\DL_pipeline\main.py", line 24, in run
+    ml_train(config)
+  File "C:\i\projects\titanic\DL_pipeline\ml_utils.py", line 56, in ml_train
+    y_val = trval_loaderain_loader.dataset.tensors[1].numpy()
+            ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'trval_loaderain_loader' is not defined

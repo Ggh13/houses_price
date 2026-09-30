@@ -1,0 +1,23 @@
+{"time":"2026-09-11T20:20:46.0085881+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmpn0dk6j2o\\port-17232.txt","pid":17232,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T20:20:46.0156021+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":17232}
+{"time":"2026-09-11T20:20:46.0156021+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":51055,"Zone":""}}
+{"time":"2026-09-11T20:20:46.0156021+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-17232-16024-359651844\\socket","Net":"unix"}}
+{"time":"2026-09-11T20:20:46.0526264+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:20:50.6989113+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"skxvcp4l","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:20:53.0239554+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"skxvcp4l","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:20:59.5069169+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:51056)","requestId":"cv8zdcruzumc"}
+{"time":"2026-09-11T20:21:34.9345164+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:51056)","requestId":"cv8zdcruzumc"}
+{"time":"2026-09-11T20:21:37.1435464+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:51056)","requestId":"cv8zdcruzumc"}
+{"time":"2026-09-11T20:21:37.1495414+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"skxvcp4l","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:39.1625654+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"skxvcp4l","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2654251+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2654251+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2654251+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2654251+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2654251+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T20:21:40.2664165+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:40.2704107+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-17232-16024-359651844\\socket","Net":"unix"}}
+{"time":"2026-09-11T20:21:40.2704107+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":51055,"Zone":""}}
+{"time":"2026-09-11T20:21:42.2666135+03:00","level":"ERROR","msg":"wbapi: error shutting down OpenTelemetry handler","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}
+{"time":"2026-09-11T20:21:42.2666135+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:51056)"}
+{"time":"2026-09-11T20:21:42.2666135+03:00","level":"INFO","msg":"server: all connections closed"}

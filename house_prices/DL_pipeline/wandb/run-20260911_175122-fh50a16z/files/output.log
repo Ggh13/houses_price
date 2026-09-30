@@ -1,0 +1,15 @@
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:70: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Sex']=df['Sex'].replace({'male':1,'female':0})
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:71: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Embarked']=df['Embarked'].replace({'S':1,'C':2,'Q':3})
+Traceback (most recent call last):
+  File "C:\i\projects\titanic\DL_pipeline\main.py", line 39, in <module>
+    run(config)
+  File "C:\i\projects\titanic\DL_pipeline\main.py", line 24, in run
+    ml_train(config)
+  File "C:\i\projects\titanic\DL_pipeline\ml_utils.py", line 49, in ml_train
+    model.fit(train_loader)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LogisticRegression.fit() missing 1 required positional argument: 'y'

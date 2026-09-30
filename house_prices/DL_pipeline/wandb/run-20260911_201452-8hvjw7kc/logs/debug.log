@@ -1,0 +1,1744 @@
+2026-09-11 20:14:52,490 INFO    MainThread:5284 [wandb_setup.py:_flush():81] Current SDK version is 0.29.0
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_setup.py:_flush():81] Configure stats pid to 5284
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:setup_run_log_directory():739] Logging user logs to C:\i\projects\titanic\DL_pipeline\wandb\run-20260911_201452-8hvjw7kc\logs\debug.log
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to C:\i\projects\titanic\DL_pipeline\wandb\run-20260911_201452-8hvjw7kc\logs\debug-internal.log
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:init():783] calling init triggers
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:init():831] starting backend
+2026-09-11 20:14:52,491 INFO    MainThread:5284 [wandb_init.py:init():846] sending inform_init request
+2026-09-11 20:14:53,610 INFO    MainThread:5284 [wandb_init.py:init():851] backend started and connected
+2026-09-11 20:14:53,611 INFO    MainThread:5284 [wandb_init.py:init():921] updated telemetry
+2026-09-11 20:14:53,752 INFO    MainThread:5284 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-09-11 20:14:54,901 INFO    MainThread:5284 [wandb_init.py:init():981] starting run threads in backend
+2026-09-11 20:14:55,112 INFO    MainThread:5284 [wandb_run.py:_console_start():2545] atexit reg
+2026-09-11 20:14:55,112 INFO    MainThread:5284 [wandb_run.py:_redirect():2395] redirect: wrap_raw
+2026-09-11 20:14:55,112 INFO    MainThread:5284 [wandb_run.py:_redirect():2464] Wrapping output streams.
+2026-09-11 20:14:55,113 INFO    MainThread:5284 [wandb_run.py:_redirect():2487] Redirects installed.
+2026-09-11 20:14:55,116 INFO    MainThread:5284 [wandb_init.py:init():1019] run started, returning control to user process
+2026-09-11 20:15:09,478 INFO    wandb-AsyncioManager-main:5284 [service_client.py:_forward_responses():122] [no run ID] Reached EOF.
+2026-09-11 20:15:09,478 INFO    wandb-AsyncioManager-main:5284 [mailbox.py:close():154] [no run ID] Closing mailbox, abandoning 2 handles.
+2026-09-11 20:15:09,482 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\run_messages.py", line 90, in loop
+    await asyncio_compat.race(
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_compat.py", line 279, in race
+    async with open_task_group(race=True) as tg:
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 217, in __aexit__
+    await anext(self.gen)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_compat.py", line 241, in open_task_group
+    await task_group._wait_all(race=race, timeout=exit_timeout)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_compat.py", line 181, in _wait_all
+    raise exc
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\run_messages.py", line 113, in _print_all
+    result = await handle.wait_async(timeout=None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\mailbox\mailbox_handle.py", line 127, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\mailbox\response_handle.py", line 123, in wait_async
+    raise HandleAbandonedError()
+wandb.sdk.mailbox.mailbox_handle.HandleAbandonedError
+2026-09-11 20:15:10,116 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\run_stopping.py", line 87, in loop
+    should_stop = await self._check_should_stop()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\run_stopping.py", line 115, in _check_should_stop
+    handle = await self._interface.deliver_async(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\interface\interface_sock.py", line 58, in deliver_async
+    handle = await self._client.deliver(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\mailbox\mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-09-11 20:15:10,657 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,679 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,681 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,682 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,682 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,683 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,684 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,684 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,685 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,686 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,687 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,688 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,688 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,689 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,690 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,691 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,691 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,692 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,693 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,694 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,695 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,695 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,696 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,697 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,697 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,698 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,698 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,699 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,700 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,700 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,701 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,702 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,703 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,703 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,704 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,707 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,708 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,709 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,711 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,713 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,714 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,716 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,717 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,718 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,719 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,721 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,722 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,723 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,725 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,726 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,727 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,729 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,730 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,730 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,731 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,732 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,733 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,734 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,735 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,736 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,737 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,739 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,741 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,742 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,744 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,745 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,746 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,749 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,750 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,751 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,754 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,755 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,757 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,759 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,760 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,761 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,763 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,764 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,765 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,766 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,767 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,769 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,770 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,773 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,774 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,775 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,776 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,777 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,778 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,780 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,781 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,784 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,785 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,787 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,788 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,789 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,791 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,792 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-09-11 20:15:10,793 ERROR   wandb-AsyncioManager-main:5284 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

@@ -1,0 +1,22 @@
+{"time":"2026-09-11T19:37:34.7485673+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmp_oz6v8mz\\port-28524.txt","pid":28524,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T19:37:34.7545624+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":28524}
+{"time":"2026-09-11T19:37:34.7545624+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":60209,"Zone":""}}
+{"time":"2026-09-11T19:37:34.7545624+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-28524-28960-3713568603\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:37:34.8800819+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:38.8352935+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"099ndwfo","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:39.6104985+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"099ndwfo","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:41.3360893+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:60210)","requestId":"0v8t5g3fyolc"}
+{"time":"2026-09-11T19:37:45.8770891+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:60210)","requestId":"0v8t5g3fyolc"}
+{"time":"2026-09-11T19:37:45.8797721+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"099ndwfo","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"099ndwfo","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T19:37:46.8652342+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:46.8657855+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-28524-28960-3713568603\\socket","Net":"unix"}}
+{"time":"2026-09-11T19:37:46.8657855+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":60209,"Zone":""}}
+{"time":"2026-09-11T19:37:48.8654409+03:00","level":"ERROR","msg":"wbapi: error shutting down OpenTelemetry handler","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}
+{"time":"2026-09-11T19:37:48.8654409+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:60210)"}
+{"time":"2026-09-11T19:37:48.8654409+03:00","level":"INFO","msg":"server: all connections closed"}

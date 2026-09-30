@@ -1,0 +1,56 @@
+{"time":"2026-09-11T17:24:14.9295331+03:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\tmp8_wj1pwv\\port-25116.txt","pid":25116,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-11T17:24:14.9374535+03:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":25116}
+{"time":"2026-09-11T17:24:14.9374535+03:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-25116-9204-1577014051\\socket","Net":"unix"}}
+{"time":"2026-09-11T17:24:14.9374535+03:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":49966,"Zone":""}}
+{"time":"2026-09-11T17:24:15.0569686+03:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:18.3780752+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"w7zqey0c","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:19.6699045+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"w7zqey0c","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:29.8816016+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"67t7zr4ye70w"}
+{"time":"2026-09-11T17:24:36.8234202+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"67t7zr4ye70w"}
+{"time":"2026-09-11T17:24:38.5732014+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"67t7zr4ye70w"}
+{"time":"2026-09-11T17:24:38.5777153+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"w7zqey0c","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:39.3863337+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"w7zqey0c","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:41.4092586+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"2wx73h81","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:42.2253339+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"2wx73h81","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:49.2798594+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"dhb63phdpqax"}
+{"time":"2026-09-11T17:24:50.9219259+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"dhb63phdpqax"}
+{"time":"2026-09-11T17:24:50.9255387+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"2wx73h81","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:52.7469815+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"2wx73h81","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:55.6400172+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"6sap5qkh","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:24:57.4677616+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"6sap5qkh","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:03.9288351+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"bxfc92gceu4m"}
+{"time":"2026-09-11T17:25:05.3687617+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"bxfc92gceu4m"}
+{"time":"2026-09-11T17:25:06.7528466+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"bxfc92gceu4m"}
+{"time":"2026-09-11T17:25:06.7572998+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"6sap5qkh","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:08.2696598+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"6sap5qkh","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:10.5178014+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"1omnc1d3","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:11.3233918+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"1omnc1d3","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:17.5155324+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"y32xglwxouzt"}
+{"time":"2026-09-11T17:25:19.669618+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"y32xglwxouzt"}
+{"time":"2026-09-11T17:25:19.6728871+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"1omnc1d3","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:21.4791823+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"1omnc1d3","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:24.6748025+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"tf0e6bm7","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:25.8319962+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"tf0e6bm7","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:32.1453815+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"1qqutph8ylum"}
+{"time":"2026-09-11T17:25:34.3719398+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"1qqutph8ylum"}
+{"time":"2026-09-11T17:25:35.7354068+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"1qqutph8ylum"}
+{"time":"2026-09-11T17:25:35.7392323+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"tf0e6bm7","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:37.7455035+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"tf0e6bm7","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:43.226746+03:00","level":"INFO","msg":"handleInformInit: received","streamId":"zjjos3xr","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:44.0127965+03:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"zjjos3xr","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:50.8132596+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"dhoas9hsldvw"}
+{"time":"2026-09-11T17:25:51.7906654+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"dhoas9hsldvw"}
+{"time":"2026-09-11T17:25:53.0731984+03:00","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:49971)","requestId":"dhoas9hsldvw"}
+{"time":"2026-09-11T17:25:53.0771983+03:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"zjjos3xr","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"zjjos3xr","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8482336+03:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:54.8489908+03:00","level":"ERROR","msg":"analytics: failed to send telemetry to backend proxy","error":"failed to upload metrics: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context canceled"}
+{"time":"2026-09-11T17:25:54.8495355+03:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\Faceless\\AppData\\Local\\Temp\\wandb-25116-9204-1577014051\\socket","Net":"unix"}}
+{"time":"2026-09-11T17:25:54.8495355+03:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":49966,"Zone":""}}
+{"time":"2026-09-11T17:25:56.5867724+03:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:49971)"}
+{"time":"2026-09-11T17:25:56.5868062+03:00","level":"INFO","msg":"server: all connections closed"}

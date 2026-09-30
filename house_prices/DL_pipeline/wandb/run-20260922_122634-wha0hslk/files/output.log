@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\i\projects\house_prices\DL_pipeline\main.py", line 39, in <module>
+    run(config)
+  File "C:\i\projects\house_prices\DL_pipeline\main.py", line 24, in run
+    ml_train(config)
+  File "C:\i\projects\house_prices\DL_pipeline\ml_utils.py", line 126, in ml_train
+    train_loader, val_loader, pipeline = get_data_loaders(config)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\house_prices\DL_pipeline\data_prepearing.py", line 104, in get_data_loaders
+    pipeline = get_transforms(df)
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_transforms() missing 1 required positional argument: 'df'

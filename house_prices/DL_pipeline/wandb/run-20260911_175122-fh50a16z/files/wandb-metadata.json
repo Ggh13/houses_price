@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.19045-SP0",
+  "python":  "CPython 3.11.8",
+  "startedAt":  "2026-09-11T14:51:22.502134Z",
+  "program":  "C:\\i\\projects\\titanic\\DL_pipeline\\main.py",
+  "codePath":  "DL_pipeline\\main.py",
+  "codePathLocal":  "main.py",
+  "git":  {
+    "remote":  "https://github.com/Ggh13/titanic.git",
+    "commit":  "8cbc64b2a169bbb7bc050b110d7dcd0fc0e754b4"
+  },
+  "email":  "Roma_buzhor@mail.ru",
+  "root":  "C:\\i\\projects\\titanic\\DL_pipeline",
+  "host":  "DESKTOP-3O1EM4I",
+  "executable":  "C:\\Users\\Faceless\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "500443557888",
+      "used":  "495328120832"
+    }
+  },
+  "memory":  {
+    "total":  "16940445696"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memoryTotal":  "8585740288",
+      "cudaCores":  3072,
+      "architecture":  "Ada",
+      "uuid":  "GPU-a95ab790-f8e3-8c5e-0a00-947869f2999f"
+    }
+  ],
+  "cudaVersion":  "13.1",
+  "writerId":  "0twzrxbbo2s3wn11h8w7ezcxg63eu7f3"
+}

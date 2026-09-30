@@ -1,0 +1,19 @@
+{"time":"2026-09-22T12:33:02.8131487+03:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-09-22T12:33:02.8136771+03:00","level":"INFO","msg":"stream: starting","core version":"0.29.0"}
+{"time":"2026-09-22T12:33:02.9406397+03:00","level":"INFO","msg":"stream: created new stream","id":"beqnvtm4"}
+{"time":"2026-09-22T12:33:02.9416408+03:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-09-22T12:33:02.9436405+03:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-09-22T12:33:02.9436405+03:00","level":"INFO","msg":"writer: started","stream_id":"beqnvtm4"}
+{"time":"2026-09-22T12:33:02.9436405+03:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-09-22T12:33:09.6702758+03:00","level":"INFO","msg":"filestream: sending request","total_files":1}
+{"time":"2026-09-22T12:33:10.8338231+03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-09-22T12:33:24.6707843+03:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":60,"events_offset":0,"events_lines":2,"uploaded_len":2}
+{"time":"2026-09-22T12:33:24.7188634+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-22T12:33:25.0305273+03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-09-22T12:33:25.0305273+03:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":2,"complete":true,"exit_code":0}
+{"time":"2026-09-22T12:33:25.3611785+03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-09-22T12:33:25.3628667+03:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-09-22T12:33:25.3697675+03:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-09-22T12:33:25.3697675+03:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-09-22T12:33:25.3703015+03:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-09-22T12:33:25.3703015+03:00","level":"INFO","msg":"stream: all finished"}

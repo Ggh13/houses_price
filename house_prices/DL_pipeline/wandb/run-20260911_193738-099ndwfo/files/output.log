@@ -1,0 +1,28 @@
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:70: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Sex']=df['Sex'].replace({'male':1,'female':0})
+C:\i\projects\titanic\DL_pipeline\data_prepearing.py:71: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df['Embarked']=df['Embarked'].replace({'S':1,'C':2,'Q':3})
+     PassengerId  Pclass                                         Name  Sex   Age  SibSp  Parch      Ticket      Fare Cabin  Embarked  FamilySize  IsAlone
+692          693       3                                 Lam, Mr. Ali    1   NaN      0      0        1601   56.4958   NaN       1.0           0        1
+481          482       2             Frost, Mr. Anthony Wood "Archie"    1   NaN      0      0      239854    0.0000   NaN       1.0           0        1
+527          528       1                           Farthing, Mr. John    1   NaN      0      0    PC 17483  221.7792   C95       1.0           0        1
+855          856       3                   Aks, Mrs. Sam (Leah Rosen)    0  18.0      0      1      392091    9.3500   NaN       1.0           1        0
+801          802       2  Collyer, Mrs. Harvey (Charlotte Annie Tate)    0  31.0      1      1  C.A. 31921   26.2500   NaN       1.0           2        0
+[[-5.4632291e-16  5.1381153e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16 -6.6256320e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16  3.9553986e+00 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ ...
+ [ 1.3987727e+00  5.3204697e-02  4.7833455e-01 ...  0.0000000e+00
+   0.0000000e+00  0.0000000e+00]
+ [ 1.3218846e+00  1.3909684e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16 -1.0973011e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]]
+C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+0.8212290502793296

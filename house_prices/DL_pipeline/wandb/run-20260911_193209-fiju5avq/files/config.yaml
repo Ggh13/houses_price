@@ -1,0 +1,53 @@
+_wandb:
+    value:
+        cli_version: 0.29.0
+        e:
+            ved4iseeejbif1eqpypze722yue63xan:
+                codePath: DL_pipeline\main.py
+                codePathLocal: main.py
+                cpu_count: 8
+                cpu_count_logical: 12
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "500443557888"
+                        used: "499202789376"
+                email: Roma_buzhor@mail.ru
+                executable: C:\Users\Faceless\AppData\Local\Programs\Python\Python311\python.exe
+                git:
+                    commit: 8cbc64b2a169bbb7bc050b110d7dcd0fc0e754b4
+                    remote: https://github.com/Ggh13/titanic.git
+                gpu: NVIDIA GeForce RTX 4060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 3072
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4060 Laptop GPU
+                      uuid: GPU-a95ab790-f8e3-8c5e-0a00-947869f2999f
+                host: DESKTOP-3O1EM4I
+                memory:
+                    total: "16940445696"
+                os: Windows-10-10.0.19045-SP0
+                program: C:\i\projects\titanic\DL_pipeline\main.py
+                python: CPython 3.11.8
+                root: C:\i\projects\titanic\DL_pipeline
+                startedAt: "2026-09-11T16:32:09.257792Z"
+                writerId: ved4iseeejbif1eqpypze722yue63xan
+        m: []
+        python_version: 3.11.8
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "4": 3.11.8
+            "5": 0.29.0
+            "8":
+                - 3
+            "12": 0.29.0
+            "13": windows-amd64

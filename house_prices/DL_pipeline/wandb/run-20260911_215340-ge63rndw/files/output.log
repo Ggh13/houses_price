@@ -1,0 +1,22 @@
+       num__Age  num__Fare  num__SibSp  num__Parch  num__FamilySize  cat__Pclass_2.0  cat__Pclass_3.0  cat__Sex_1.0  cat__Embarked_2.0  cat__Embarked_3.0  cat__IsAlone_1.0
+0 -5.463229e-16   0.513812   -0.465084   -0.466183        -0.556339              0.0              1.0           1.0                0.0                0.0               1.0
+1 -5.463229e-16  -0.662563   -0.465084   -0.466183        -0.556339              1.0              0.0           1.0                0.0                0.0               1.0
+2 -5.463229e-16   3.955399   -0.465084   -0.466183        -0.556339              0.0              0.0           1.0                0.0                0.0               1.0
+3 -9.078708e-01  -0.467874   -0.465084    0.727782         0.073412              0.0              1.0           0.0                0.0                0.0               0.0
+4  9.167471e-02  -0.115977    0.478335    0.727782         0.703162              1.0              0.0           0.0                0.0                0.0               0.0
+[[-5.4632291e-16  5.1381153e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16 -6.6256320e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16  3.9553986e+00 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ ...
+ [ 1.3987727e+00  5.3204697e-02  4.7833455e-01 ...  0.0000000e+00
+   0.0000000e+00  0.0000000e+00]
+ [ 1.3218846e+00  1.3909684e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]
+ [-5.4632291e-16 -1.0973011e-01 -4.6508428e-01 ...  0.0000000e+00
+   0.0000000e+00  1.0000000e+00]]
+Лучшие подломанные параметры: {'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
+Все параметры модели: {'objective': 'binary:logistic', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 1.0, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'logloss', 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.05, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 7, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 50, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 1.0, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}
+Лучший score на кросс-валидации: 0.8301388752092977
