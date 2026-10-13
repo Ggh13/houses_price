@@ -3,7 +3,7 @@ from utils import set_seed
 from utils import ClassicTraining, KFoldTraining, Predict_kfold
 from omegaconf import DictConfig
 import os
-from ml_utils import ml_train
+from ml_utils import ml_train, voting_ml_train, stacking_ml_train
 os.environ['WANDB_API_KEY'] = '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'
 
 def run(config):
@@ -22,6 +22,10 @@ def run(config):
         Predict_kfold(config)
     elif mode == "classic_ml":
         ml_train(config)
+    elif mode == "voting_ml":
+        voting_ml_train(config)
+    elif mode == "stacking_ml":
+        stacking_ml_train(config)
     else:
         raise ValueError(f'Invalid mode: {mode}')
 

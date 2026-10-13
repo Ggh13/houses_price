@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 43, in <module>
+    run(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 26, in run
+    voting_ml_train(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 339, in voting_ml_train
+    model = get_voting_model(config, df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 49, in get_voting_model
+    xgb_est, _ = get_model(config, type='Xgboost')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 158, in get_model
+    raise ValueError(f'Недопустимый тип модели: {type}')
+ValueError: Недопустимый тип модели: Xgboost

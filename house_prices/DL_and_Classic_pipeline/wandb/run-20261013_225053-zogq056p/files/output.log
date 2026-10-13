@@ -1,0 +1,177 @@
+
+=== Диагностика эпохи 0 ===
+  train_loss: 111.305788
+  val_loss:   95.466570
+  val_rmse:   9.770700
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    2.2645, std: 0.0057
+  pred min/max: 2.2466 / 2.2728
+  grad norm (1-й слой): 2.442897
+
+=== Диагностика эпохи 5 ===
+  train_loss: 34.368675
+  val_loss:   28.342029
+  val_rmse:   5.323723
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    6.7186, std: 0.0013
+  pred min/max: 6.7134 / 6.7197
+  grad norm (1-й слой): 0.717274
+
+=== Диагностика эпохи 10 ===
+  train_loss: 3.662097
+  val_loss:   2.278527
+  val_rmse:   1.509479
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    10.5738, std: 0.0012
+  pred min/max: 10.5684 / 10.5747
+  grad norm (1-й слой): 0.628230
+
+=== Диагностика эпохи 15 ===
+  train_loss: 0.985776
+  val_loss:   0.208780
+  val_rmse:   0.456925
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.8252, std: 0.0015
+  pred min/max: 11.8218 / 11.8277
+  grad norm (1-й слой): 0.454910
+
+=== Диагностика эпохи 20 ===
+  train_loss: 0.982483
+  val_loss:   0.165688
+  val_rmse:   0.407048
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.8896, std: 0.0290
+  pred min/max: 11.8231 / 11.9339
+  grad norm (1-й слой): 0.502527
+
+=== Диагностика эпохи 25 ===
+  train_loss: 0.827234
+  val_loss:   0.053635
+  val_rmse:   0.231593
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.9637, std: 0.2457
+  pred min/max: 11.4236 / 12.2243
+  grad norm (1-й слой): 0.380298
+
+=== Диагностика эпохи 30 ===
+  train_loss: 0.891604
+  val_loss:   0.040357
+  val_rmse:   0.200891
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.9893, std: 0.2522
+  pred min/max: 11.4819 / 12.3175
+  grad norm (1-й слой): 0.516837
+
+=== Диагностика эпохи 35 ===
+  train_loss: 0.813581
+  val_loss:   0.033435
+  val_rmse:   0.182852
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0336, std: 0.2232
+  pred min/max: 11.5564 / 12.4206
+  grad norm (1-й слой): 0.645182
+
+=== Диагностика эпохи 40 ===
+  train_loss: 0.882032
+  val_loss:   0.027935
+  val_rmse:   0.167138
+  lr:         1.00e-03
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0786, std: 0.2601
+  pred min/max: 11.5935 / 12.5004
+  grad norm (1-й слой): 0.468164
+
+=== Диагностика эпохи 45 ===
+  train_loss: 0.840117
+  val_loss:   0.027713
+  val_rmse:   0.166472
+  lr:         1.00e-04
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0518, std: 0.2366
+  pred min/max: 11.6376 / 12.4925
+  grad norm (1-й слой): 0.572440
+
+=== Диагностика эпохи 50 ===
+  train_loss: 0.853849
+  val_loss:   0.025683
+  val_rmse:   0.160260
+  lr:         1.00e-04
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0003, std: 0.2723
+  pred min/max: 11.5163 / 12.4973
+  grad norm (1-й слой): 0.629989
+
+=== Диагностика эпохи 55 ===
+  train_loss: 0.800097
+  val_loss:   0.033326
+  val_rmse:   0.182553
+  lr:         1.00e-04
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.9470, std: 0.2980
+  pred min/max: 11.4321 / 12.5016
+  grad norm (1-й слой): 0.826872
+
+=== Диагностика эпохи 60 ===
+  train_loss: 0.917730
+  val_loss:   0.022139
+  val_rmse:   0.148792
+  lr:         1.00e-04
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0234, std: 0.2752
+  pred min/max: 11.5425 / 12.5343
+  grad norm (1-й слой): 0.563816
+
+=== Диагностика эпохи 65 ===
+  train_loss: 0.779869
+  val_loss:   0.022210
+  val_rmse:   0.149030
+  lr:         1.00e-04
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    12.0151, std: 0.2789
+  pred min/max: 11.5343 / 12.5401
+  grad norm (1-й слой): 0.556728
+
+=== Диагностика эпохи 70 ===
+  train_loss: 0.798039
+  val_loss:   0.026951
+  val_rmse:   0.164167
+  lr:         1.00e-05
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.9739, std: 0.2848
+  pred min/max: 11.4900 / 12.5275
+  grad norm (1-й слой): 0.563163
+
+=== Диагностика эпохи 75 ===
+  train_loss: 0.801929
+  val_loss:   0.024400
+  val_rmse:   0.156204
+  lr:         1.00e-06
+  y_batch mean: 12.0848, std: 0.3039
+  pred mean:    11.9913, std: 0.2824
+  pred min/max: 11.5086 / 12.5357
+  grad norm (1-й слой): 0.781785
+
+Обучение остановлено на эпохе 77: val_loss не улучшался 15 эпох
+
+==================================================
+Последний train_loss (MSE): 0.8807
+Последний val_loss (MSE):   0.0244
+Последний val_rmse:         0.1561
+Последний val_r2:          0.8555
+==================================================
+
+==================================================
+Статистика предсказаний на валидации:
+  target mean: 12.0266, std: 0.4106
+  pred mean:   11.9547, std: 0.3439
+  pred min:    11.0103, max: 12.5971
+  corr:        0.9478
+==================================================

@@ -19,12 +19,14 @@ import pandas as pd
 
 import joblib
 import torch.nn as nn
+import warnings
 
 from sklearn.model_selection import StratifiedKFold
+from sklearn.pipeline import Pipeline
 
 
 def set_seed(seed: int):
-    '''Set a random seed for complete reproducibility.'''
+    """Устанавливает seed для воспроизводимости результатов."""
 
     random.seed(seed)
     np.random.seed(seed)
@@ -36,9 +38,19 @@ def set_seed(seed: int):
 
 
 def get_transforms(config, df):
+    """
+    Создаёт пайплайн предобработки данных.
+    
+    Args:
+        config: Конфигурация проекта.
+        df: DataFrame с данными (для определения типов колонок).
+    
+    Returns:
+        Pipeline: Пайплайн с ColumnTransformer (числовые + категориальные).
+    """
     ignore_cols = ['Id', 'SalePrice']
     feature_cols = [c for c in df.columns if c not in ignore_cols]
-    
+
     numeric_features = df[feature_cols].select_dtypes(include=['int64', 'float64']).columns.tolist()
     categorical_features = df[feature_cols].select_dtypes(include=['object', 'category']).columns.tolist()
 
@@ -67,42 +79,77 @@ def get_transforms(config, df):
 
 
 def data_engineering(df):
-    '''Создание новых признаков под House Prices.'''
-    df = df.copy()
+    """
+    Создание новых признаков, обработка выбросов и лог-трансформация.
     
+    Args:
+        df: Исходный DataFrame.
+    
+    Returns:
+        Обработанный DataFrame.
+    """
+    df = df.copy()
+
+    # Удаление явных аномалий: большие дома по очень низкой цене
+    if 'SalePrice' in df.columns:
+        df = df[~((df['GrLivArea'] > 4000) & (df['SalePrice'] < 200000))]
+
+    # Создание новых признаков (до лог-трансформации)
     if 'TotalBsmtSF' in df.columns and 'GrLivArea' in df.columns:
         df['TotalSF'] = df['TotalBsmtSF'].fillna(0) + df['GrLivArea'].fillna(0)
-        
+
     if 'YrSold' in df.columns and 'YearBuilt' in df.columns:
         df['HouseAge'] = df['YrSold'] - df['YearBuilt']
-        
+
     bath_cols = ['FullBath', 'HalfBath', 'BsmtFullBath', 'BsmtHalfBath']
     if all(col in df.columns for col in bath_cols):
         df['TotalBaths'] = (
-            df['FullBath'].fillna(0) + 
-            0.5 * df['HalfBath'].fillna(0) + 
-            df['BsmtFullBath'].fillna(0) + 
+            df['FullBath'].fillna(0) +
+            0.5 * df['HalfBath'].fillna(0) +
+            df['BsmtFullBath'].fillna(0) +
             0.5 * df['BsmtHalfBath'].fillna(0)
         )
 
+    # Лог-трансформация признаков со скошенным распределением
+    skewed_features = ['LotArea', 'LotFrontage', 'TotalBsmtSF', 'GrLivArea', 'MasVnrArea']
+    for col in skewed_features:
+        if col in df.columns:
+            df[col] = np.log1p(df[col])
+
     return df
 
-def get_data_loaders(config):
+
+def get_data_loaders(config, preprocess=True):
+    """
+    Загрузка данных и создание DataLoader.
+    
+    Args:
+        config: Конфигурация проекта.
+        preprocess: Если True, выполняется предобработка (для DL).
+                    Если False, возвращаются сырые данные (для классических моделей,
+                    где предобработка должна быть внутри GridSearchCV).
+    
+    Returns:
+        Если preprocess=True: train_loader, val_loader, pipeline
+        Если preprocess=False: X_train_raw, y_train, X_val_raw, y_val, df
+    """
     df = pd.read_csv(config.paths.train_csv)
     df = data_engineering(df)
 
     X = df.drop(columns=['SalePrice'])
     y = np.log1p(df['SalePrice'].values)
 
-
     X_train_raw, X_val_raw, y_train, y_val = train_test_split(
-        X, y, 
-        test_size=config.data.kfold.val_size, 
-        random_state=config.seed
+        X, y,
+        test_size=config.data.kfold.val_size,
+        random_state=config.seed,
+        shuffle=config.data.shuffle
     )
 
+    if not preprocess:
+        return X_train_raw, y_train, X_val_raw, y_val, df
+
     pipeline = get_transforms(config, df)
-    
 
     X_train = pipeline.fit_transform(X_train_raw)
     X_val = pipeline.transform(X_val_raw)
@@ -111,13 +158,12 @@ def get_data_loaders(config):
         X_train = X_train.toarray()
         X_val = X_val.toarray()
 
-
     train_dataset = TensorDataset(
-        torch.tensor(X_train, dtype=torch.float32), 
+        torch.tensor(X_train, dtype=torch.float32),
         torch.tensor(y_train, dtype=torch.float32).unsqueeze(1)
     )
     val_dataset = TensorDataset(
-        torch.tensor(X_val, dtype=torch.float32), 
+        torch.tensor(X_val, dtype=torch.float32),
         torch.tensor(y_val, dtype=torch.float32).unsqueeze(1)
     )
 

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 43, in <module>
+    run(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 24, in run
+    ml_train(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 186, in ml_train
+    base_estimator, param_grid = get_model(config, type=config.type_classic, in_features=in_features)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 158, in get_model
+    raise ValueError(f'Недопустимый тип модели: {type}')
+ValueError: Недопустимый тип модели: XGBoost

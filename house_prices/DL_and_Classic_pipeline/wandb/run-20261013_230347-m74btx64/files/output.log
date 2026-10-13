@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 43, in <module>
+    run(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 24, in run
+    ml_train(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 206, in ml_train
+    grid_search.fit(X_train_raw, y_train)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_search.py", line 1131, in fit
+    self._run_search(evaluate_candidates, callback_ctx=root_callback_ctx)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_search.py", line 1718, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid), callback_ctx=search_ctx)
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_search.py", line 1080, in evaluate_candidates
+    out = parallel(
+          ^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\Faceless\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\parallel.py", line 1800, in _retrieve
+    time.sleep(0.01)
+KeyboardInterrupt

@@ -1,0 +1,5 @@
+Лучшие подобранные параметры: {'model__depth': 6, 'model__iterations': 300, 'model__l2_leaf_reg': 5, 'model__learning_rate': 0.1}
+Все параметры модели: {'loss_function': 'RMSE', 'verbose': 0, 'random_state': 42, 'depth': 6, 'iterations': 300, 'l2_leaf_reg': 5, 'learning_rate': 0.1}
+Последний MSE на валидации: 0.0130
+Последний RMSE на валидации: 0.1141
+Последний R2 на валидации: 0.9227

@@ -1,0 +1,17 @@
+{
+  "os":  "Windows-10-10.0.19045-SP0",
+  "python":  "CPython 3.11.8",
+  "startedAt":  "2026-10-13T20:20:37.235225Z",
+  "program":  "C:\\i\\projects\\houses_price\\house_prices\\DL_and_Classic_pipeline\\main.py",
+  "codePath":  "house_prices\\DL_and_Classic_pipeline\\main.py",
+  "codePathLocal":  "main.py",
+  "git":  {
+    "remote":  "https://github.com/Ggh13/houses_price.git",
+    "commit":  "5a2938b9cdeed7d4cdb55d8090d06683abce88bc"
+  },
+  "email":  "Roma_buzhor@mail.ru",
+  "root":  "C:\\i\\projects\\houses_price\\house_prices\\DL_and_Classic_pipeline",
+  "host":  "DESKTOP-3O1EM4I",
+  "executable":  "C:\\Users\\Faceless\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "writerId":  "0ub8b9fd7ptyknuuwdc8mjqha51xy1m2"
+}

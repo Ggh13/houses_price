@@ -1,0 +1,18 @@
+{"time":"2026-10-13T19:18:34.0426854+03:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-10-13T19:18:34.0426854+03:00","level":"INFO","msg":"stream: starting","core version":"0.29.0"}
+{"time":"2026-10-13T19:18:34.1578368+03:00","level":"INFO","msg":"stream: created new stream","id":"ez4evk73"}
+{"time":"2026-10-13T19:18:34.158422+03:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-10-13T19:18:34.1596834+03:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-10-13T19:18:34.1596834+03:00","level":"INFO","msg":"writer: started","stream_id":"ez4evk73"}
+{"time":"2026-10-13T19:18:34.1596834+03:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-10-13T19:18:37.9172185+03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":2}
+{"time":"2026-10-13T19:18:38.5337073+03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-10-13T19:18:43.79114+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-13T19:18:43.7916991+03:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":77,"console_offset":2,"console_lines":175,"uploaded_len":5,"complete":true,"exit_code":0}
+{"time":"2026-10-13T19:18:44.1949183+03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-10-13T19:18:44.1962633+03:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-10-13T19:18:44.2013721+03:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-10-13T19:18:44.2013721+03:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-10-13T19:18:44.201892+03:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-10-13T19:18:44.201892+03:00","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-10-13T19:18:46.2029678+03:00","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}

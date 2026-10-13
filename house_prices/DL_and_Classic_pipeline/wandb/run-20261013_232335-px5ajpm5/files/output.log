@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 43, in <module>
+    run(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\main.py", line 28, in run
+    stacking_ml_train(config)
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 375, in stacking_ml_train
+    model = get_stacking_model(config, df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 78, in get_stacking_model
+    rf_est, _ = get_model(config, type='randomForest')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\i\projects\houses_price\house_prices\DL_and_Classic_pipeline\ml_utils.py", line 158, in get_model
+    raise ValueError(f'Недопустимый тип модели: {type}')
+ValueError: Недопустимый тип модели: randomForest

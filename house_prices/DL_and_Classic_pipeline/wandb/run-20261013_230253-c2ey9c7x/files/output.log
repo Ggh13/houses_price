@@ -1,0 +1,5 @@
+Лучшие подобранные параметры: {'model__max_depth': 5, 'model__min_samples_leaf': 4, 'model__min_samples_split': 10}
+Все параметры модели: {'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': 5, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'random_state': 42, 'splitter': 'best'}
+Последний MSE на валидации: 0.0333
+Последний RMSE на валидации: 0.1824
+Последний R2 на валидации: 0.8026

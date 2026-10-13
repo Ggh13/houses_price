@@ -1,0 +1,18 @@
+[[-0.8667643  -0.01246836 -0.2128957  ...  0.          1.
+   0.        ]
+ [ 0.07410996 -0.5023568  -0.26524463 ...  0.          1.
+   0.        ]
+ [-0.6315457  -0.14607431 -0.17784147 ...  0.          1.
+   0.        ]
+ ...
+ [-0.8667643  -0.45782152 -0.23409563 ...  0.          1.
+   0.        ]
+ [-0.16110861 -0.6804981  -0.28337613 ...  0.          1.
+   0.        ]
+ [ 1.4854213  -0.76956874 -0.65139925 ...  0.          1.
+   0.        ]]
+Лучшие подобранные параметры: {'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
+Все параметры модели: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 1.0, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.05, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 200, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}
+Лучший score на кросс-валидации: -0.015956977754831313
+MSE на валидации: 0.0166
+R2 на валидации: 0.9109
